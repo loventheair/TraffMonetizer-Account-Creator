@@ -1,0 +1,6 @@
+imap-tools
+selenium
+bs4
+pyperclip
+mysql-connector-python
+paramiko
