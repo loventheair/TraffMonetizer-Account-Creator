@@ -14,6 +14,22 @@ from selenium.webdriver.common.keys import Keys
 from selenium.webdriver.support import expected_conditions as EC
 from selenium.webdriver.support.ui import WebDriverWait
 
+# Database Information's
+db_host = ""
+db_user = ""
+db_password = ""
+database = ""
+
+# Settings
+
+imap_username = ""
+imap_password = ""
+imap_server = ""
+
+traff_refferal_link = "https://app.traffmonetizer.com/sign-up?aff=xxxxx"
+traff_password = ""
+random_email_domain = "@gmail.com"
+payeer_secret = ""
 
 # Functions
 
@@ -40,10 +56,10 @@ def payeer_add_account_to_traff():
                                     browser.get(fixed_link_idk)
 
                                     mydb = mysql.connector.connect(
-                                        host="byte.rasbyte.net",
-                                        user="admin_omer",
-                                        password="@But@!ib$iriy3v200311",
-                                        database="admin_omer"
+                                        host=f"{db_host}",
+                                        user=f"{db_user}",
+                                        password=f"{db_password}",
+                                        database=f"{database}"
                                     )
 
                                     mycursor = mydb.cursor()
@@ -56,10 +72,10 @@ def payeer_add_account_to_traff():
 
                                     # Connect to mysql
                                     mydb = mysql.connector.connect(
-                                        host="byte.rasbyte.net",
-                                        user="admin_omer",
-                                        password="@But@!ib$iriy3v200311",
-                                        database="admin_omer"
+                                        host=f"{db_host}",
+                                        user=f"{db_user}",
+                                        password=f"{db_password}",
+                                        database=f"{database}"
                                     )
                                     try:
                                         mycursor = mydb.cursor()
@@ -83,10 +99,10 @@ def payeer_add_account_to_traff():
                                     while True:
                                         try:
                                             mydb = mysql.connector.connect(
-                                                host="byte.rasbyte.net",
-                                                user="admin_omer",
-                                                password="@But@!ib$iriy3v200311",
-                                                database="admin_omer"
+                                                host=f"{db_host}",
+                                                user=f"{db_user}",
+                                                password=f"{db_password}",
+                                                database=f"{database}"
                                             )
                                             mycursor = mydb.cursor()
                                             sql = "SELECT COUNT(1) FROM traff_new WHERE need_new = 'True'"
@@ -112,17 +128,6 @@ def payeer_add_account_to_traff():
         time.sleep(5)
 
 
-
-# Settings
-
-imap_username = "mail@shork.email"
-imap_password = "@But@!ib$iriy3v200311"
-imap_server = "shiriyev.me"
-
-traff_refferal_link = "https://app.traffmonetizer.com/sign-up?aff=302695"
-traff_password = "Abutalib200311"
-random_email_domain = "@shork.email"
-payeer_secret = "Theyka"
 
 try:
     # Generate random email
