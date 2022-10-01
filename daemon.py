@@ -8,14 +8,21 @@ import sys
 import mysql.connector
 import paramiko
 
+
+# Database Information's
+db_host = ""
+db_user = ""
+db_password = ""
+database = ""
+
 while True:
     try:
         # Check if system have new account
         mydb = mysql.connector.connect(
-            host="byte.rasbyte.net",
-            user="admin_omer",
-            password="@But@!ib$iriy3v200311",
-            database="admin_omer"
+            host=f"{db_host}",
+            user=f"{db_user}",
+            password=f"{db_password}",
+            database=f"{database}"
         )
         try:
             mycursor = mydb.cursor()
@@ -33,10 +40,10 @@ while True:
 
             # Connect to mysql
             mydb = mysql.connector.connect(
-                host="byte.rasbyte.net",
-                user="admin_omer",
-                password="@But@!ib$iriy3v200311",
-                database="admin_omer"
+                host=f"{db_host}",
+                user=f"{db_user}",
+                password=f"{db_password}",
+                database=f"{database}"
             )
             try:
                 mycursor = mydb.cursor()
@@ -64,10 +71,10 @@ while True:
                 try:
                     # Connect to mysql
                     mydb = mysql.connector.connect(
-                        host="byte.rasbyte.net",
-                        user="admin_omer",
-                        password="@But@!ib$iriy3v200311",
-                        database="admin_omer"
+                        host=f"{db_host}",
+                        user=f"{db_user}",
+                        password=f"{db_password}",
+                        database=f"{database}"
                     )
                     try:
                         mycursor = mydb.cursor()
@@ -89,10 +96,10 @@ while True:
 
                     # Connect to mysql
                     mydb = mysql.connector.connect(
-                        host="byte.rasbyte.net",
-                        user="admin_omer",
-                        password="@But@!ib$iriy3v200311",
-                        database="admin_omer"
+                        host=f"{db_host}",
+                        user=f"{db_user}",
+                        password=f"{db_password}",
+                        database=f"{database}"
                     )
                     try:
                         mycursor = mydb.cursor()
